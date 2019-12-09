@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageviewBackgroudbanmer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/custom_bacgroud_banner" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imageviewBackgroudbanmer">
+
+        <ImageView
+            android:id="@+id/imageviewBanner"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/textViewtitleBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageviewBanner"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imageviewBanner"
+            android:text="Làm Vợ Anh Nhé"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewtitleBanner"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/imageviewBanner">
+
+            <TextView
+                android:id="@+id/tvnoidung"
+                android:textColor="#ffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:maxLines="2"
+                android:text="Chào bạn đã đến với ca khúc hot nhất hiện nay  "
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
