@@ -4,37 +4,37 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:id="@+id/RelativeChudetheloai"
-
+        android:id="@+id/RelativeAlbum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="7dp">
 
         <TextView
-            android:id="@+id/textviewtitle"
+            android:id="@+id/textviewTitleAlbum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CHỦ ĐỀ VÀ THỂ LOẠI"
+            android:text="AlBUM HOT"
             android:textColor="#000000"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textviewxemthemchude"
+            android:id="@+id/tvxemthemAlbum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="xem thêm"
+            android:text="Xem Thêm"
             android:textColor="#913677"
             android:textSize="18sp" />
     </RelativeLayout>
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollview"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerviewAlbum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/RelativeChudetheloai"
-        android:scrollbars="none">
+        android:layout_below="@+id/RelativeAlbum"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
+    </androidx.recyclerview.widget.RecyclerView>
 
-    </HorizontalScrollView>
 </RelativeLayout>

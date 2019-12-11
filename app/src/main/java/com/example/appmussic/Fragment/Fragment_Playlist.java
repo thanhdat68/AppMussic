@@ -1,10 +1,11 @@
 package com.example.appmussic.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -14,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.appmussic.Activity.DanhsachbaihatActivity;
+import com.example.appmussic.Activity.DanhsachcacplaylistActivity;
 import com.example.appmussic.Adapter.Playlist_Adapter;
 import com.example.appmussic.Model.Playlist;
 import com.example.appmussic.R;
@@ -42,6 +45,13 @@ public class Fragment_Playlist extends Fragment {
         txttitlePlaylist = view.findViewById(R.id.textviewtitlePlaylist);
         txtviewXemthemPlaylist = view.findViewById(R.id.textviewviewmoreplaylist);
         GetData();
+        txtviewXemthemPlaylist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(), DanhsachcacplaylistActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
@@ -55,6 +65,14 @@ public class Fragment_Playlist extends Fragment {
                 playlist_adapter = new Playlist_Adapter(getActivity(), android.R.layout.simple_list_item_1, mangPlaylist);
                 listViewplaylist.setAdapter(playlist_adapter);
                 setListViewHeightBasedOnChildren(listViewplaylist);
+                 listViewplaylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                     @Override
+                     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                         Intent intent=new Intent(getActivity(), DanhsachbaihatActivity.class);
+                         intent.putExtra("itemplaylist",mangPlaylist.get(position));
+                         startActivity(intent);
+                     }
+                 });
             }
 
             @Override
