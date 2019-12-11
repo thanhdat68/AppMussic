@@ -30,6 +30,7 @@ public class Fragment_dianhac extends Fragment {
       circleImageView=view.findViewById(R.id.imageviewcircle);
       objectAnimator=ObjectAnimator.ofFloat(circleImageView,"rotation",0f,360f);
       objectAnimator.setDuration(10000);
+      objectAnimator.start();
       objectAnimator.setRepeatCount(ValueAnimator.INFINITE);
       objectAnimator.setRepeatMode(ValueAnimator.RESTART);
       objectAnimator.setInterpolator(new LinearInterpolator());
